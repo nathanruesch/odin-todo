@@ -1,0 +1,79 @@
+:root {
+    /* Header Styles */
+    --headerBackgroundColor: rgba(255, 255, 255, 0.3);
+    --headerTitleColor: #d91c1c;
+
+    /* Projects Styles */
+    --projectContainerBackground: rgba(255, 255, 255, 0.5);
+    --projectTitleColor: #FFFFFF;
+    --projectBackgroundColor: rgba(255, 255, 255, 1);
+
+    /* Todo Styles */
+    --todoContainerBackground: rgba(255, 255, 255, 1);
+    --todoTitleColor: #FFFFFF;
+    --todoBackgroundColor: #FFFFFF;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 700px;
+    margin: 0;
+    position: relative;
+}
+
+html {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 18%, rgba(2,172,229,1) 61%, rgba(0,212,255,1) 100%);
+    
+    background-attachment: fixed;
+}
+
+.header-div {
+    position: fixed;
+    background-color: var(--headerBackgroundColor);
+
+    width: 100vw;
+
+    min-height: 100px;
+    max-height: 250px;
+}
+
+.header-title {
+    font-size: 2.5em;
+    color: var(--headerTitleColor);
+    text-align: center;
+}
+
+.mid-content-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-div {
+    background-color: var(--projectContainerBackground);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.project {
+    background-color: var(--projectBackgroundColor);
+    color: var(--projectTitleColor);
+}
+
+.todo-div {
+    background-color: var(--todoContainerBackground);
+    flex-grow: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.todo {
+    background-color: var(--todoBackgroundColor);
+    color: var(--todoTitleColor);
+}
