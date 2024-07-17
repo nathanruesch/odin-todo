@@ -4,7 +4,7 @@ const header = () => {
 
     // Create the page title
     const pageTitle = document.createElement("h1");
-    pageTitle.textContent = "Odin Todo";
+    pageTitle.textContent = "Simple Todo";
     pageTitle.classList.add("header-item", "header-title");
 
     parentDiv.appendChild(pageTitle);

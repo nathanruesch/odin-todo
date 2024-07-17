@@ -1,7 +1,7 @@
 :root {
     /* Header Styles */
-    --headerBackgroundColor: rgba(255, 255, 255, 0.3);
-    --headerTitleColor: #d91c1c;
+    --headerBackgroundColor: rgb(0, 0, 0);
+    --headerTitleColor: #0f47ee;
 
     /* Projects Styles */
     --projectContainerBackground: rgba(255, 255, 255, 0.5);
@@ -14,31 +14,41 @@
     --todoBackgroundColor: #FFFFFF;
 }
 
-body {
-    box-sizing: border-box;
-    min-height: 700px;
+* {
     margin: 0;
-    position: relative;
+    padding: 0;
 }
 
 html {
-    min-width: 100vw;
-    min-height: 100vh;
+    height: 100%;
+}
 
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 18%, rgba(2,172,229,1) 61%, rgba(0,212,255,1) 100%);
-    
-    background-attachment: fixed;
+body {
+    height: 100%;
+    max-height: 100vh;
+
+    background-image: url(https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+#header {
+    min-height: 10vh;
+    width: 100%;
 }
 
 .header-div {
-    position: fixed;
     background-color: var(--headerBackgroundColor);
 
-    width: 100vw;
-
-    min-height: 100px;
-    max-height: 250px;
+    height: 100%;
 }
 
 .header-title {
@@ -47,33 +57,44 @@ html {
     text-align: center;
 }
 
-.mid-content-div {
-    display: flex;
-    flex-direction: row;
+#content {
+    height: 70vh;
+    padding: 0 25% 20% 25%;
 }
 
-.project-div {
-    background-color: var(--projectContainerBackground);
-    flex-grow: 1;
+.content-container {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+.sidebar {
+    height: 100%;
+    width: 20%;
+
+    background-color: red;
+}
+
+.sidebar-header {
+    font-size: 1.6em;
+}
+
+.sidebar-projects {
     display: flex;
     flex-direction: column;
-    gap: 5px;
 }
 
-.project {
-    background-color: var(--projectBackgroundColor);
-    color: var(--projectTitleColor);
-}
-
-.todo-div {
-    background-color: var(--todoContainerBackground);
-    flex-grow: 4;
+.todo-container {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-}
 
-.todo {
-    background-color: var(--todoBackgroundColor);
-    color: var(--todoTitleColor);
+    height: 100%;
+    width: 80%;
+
+    background-color: blue;
 }
