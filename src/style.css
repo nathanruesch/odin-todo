@@ -9,9 +9,12 @@
     --projectBackgroundColor: rgba(255, 255, 255, 1);
 
     /* Todo Styles */
-    --todoContainerBackground: rgba(255, 255, 255, 1);
+    --todoContainerBackground: rgb(150, 150, 150);
     --todoTitleColor: #FFFFFF;
     --todoBackgroundColor: #FFFFFF;
+
+    /* Sidebar Styles */
+    --sidebarBackgroundColor: rgb(130, 130, 130);
 }
 
 * {
@@ -71,6 +74,9 @@ body {
     height: 100%;
 
     display: flex;
+
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 .sidebar {
@@ -78,23 +84,49 @@ body {
     width: 20%;
 
     background-color: red;
+
+    flex: 1;
+
+    border-right: 2px solid black;
+
+    background-color: var(--sidebarBackgroundColor);
 }
 
 .sidebar-header {
     font-size: 1.6em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.divider {
+    border: none;
+    height: 2px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    background-color: black;
 }
 
 .sidebar-projects {
     display: flex;
     flex-direction: column;
+    text-align: center;
+
+    gap: 5px;
+}
+
+.todos {
+    height: 100%;
+    width: 80%;
+
+    background-color: var(--todoBackgroundColor);
+}
+
+.todo-header  {
+    text-align: center;
+    font-size: 1.6em;
 }
 
 .todo-container {
     display: flex;
     flex-direction: column;
-
-    height: 100%;
-    width: 80%;
-
-    background-color: blue;
 }
